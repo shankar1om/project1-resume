@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project-1 resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body{
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container{
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            min-height: 1000px;
+            background-color: #fff;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            box-shadow: 0 35px 35px ;
+            margin: 50px;
+        }
+        .container .leftside{
+            position: relative;
+            background-color: #003147;
+            padding: 20px;
+        }
+       .leftside .profile{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+           align-items: center;
+           border-bottom:  1px solid rgba(255, 255, 255, 0.2);
+           padding-top: 20px;
+        }
+        .profile .image{
+            position:relative;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        img{
+           position: absolute;
+           top: 0px;
+           left: -67px;
+        }
+        .profile h2{
+            color: #fff;
+            font-size: 1.5em;
+            margin-top: 20px;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 600;
+            line-height: 1.4em;
+        }
+        .profile h2 span{
+            font-size: 0.8em;
+            font-weight: 300;
+            opacity: 0.3;
+        }
+        .contact {
+            padding: 20px;
+        }
+        .title{
+            text-transform: uppercase;
+            color: #fff;
+            letter-spacing: 1px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        .contact ul{
+
+        }
+        .contact ul li{
+            list-style: none;
+            margin-top: 10px;
+        }
+        .contact ul li .icon{
+            display: inline-block;
+            font-size: 18px;
+            color: #03a9f4;
+            margin-right: 10px;
+        }
+        .contact ul li span{
+            color: #fff;
+            font-weight: 300;
+        }
+        .leftside .education li{
+            margin-bottom: 15px;
+        }
+        .leftside .education li h5{
+            color: #03a9f4;
+        }
+        .leftside .education li h4{
+            color: #fff;
+            font-weight: 500;
+        }
+        h3{
+            color: #fff;
+            font-size: 1.6em;
+            font-weight: 300;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .leftside .language{
+            margin-top: -20px;
+        }
+        .leftside .language li .percent{
+            position: relative;
+            width: 100%;
+            height: 6px;
+            background: #081921;
+            margin-top: 5px;
+        }
+        .leftside .language li .percent div{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background: #03a9f4;
+        }
+        .rightside{
+            padding: 20px;
+        }
+        .title2{
+            color: #003147;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        P{
+            color: #333;
+        }
+        .about .box{
+          display: flex;
+          flex-direction: row;
+          margin-top: 30px;
+        }
+        .box .text{
+           margin-left: 12px;
+        }
+        
+        
+        .about .title2{
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        .box h5{
+            text-transform: uppercase;
+            font-weight: 500;
+            color: #848c99;
+        }
+        .box h4{
+            color: #03a9f4;
+            font-weight: 600;
+        }
+        .box .comapany{
+            margin-top: 5px;
+        }
+        .skills .box h4{
+            color: #848c99;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        .skills .box .percent{
+            position: relative;
+            width: 100%;
+            height: 10px;
+            background-color: #f0f0f0;
+        }
+        .skills .box{
+            display: grid;
+            grid-template-columns: 150px 1fr;
+        }
+        .skills .box .percent div{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background: #03a9f4;
+        }
+        .interest ul li{
+            list-style: none;
+            margin-top: 5px;
+        }
+       .interest ul li .fa{
+            margin-right: 10px;
+            font-size: 18px;
+            color: #03a9f4;
+        }
+     .interest ul{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+     }
+     @media (max-width: 1000px)
+     {
+        .container{
+            margin: 10px;
+            grid-template-columns: 1fr;
+        }
+        .interest ul{
+            grid-template-columns: repeat(2,1fr);
+        }
+     }
+     @media (max-width: 600px)
+     {
+        .about .box{
+            flex-direction: column;
+        }
+            .box .comapany h5{
+                margin-left: 10px;
+        }
+           .box .comapany{
+            margin-bottom: 10px;
+           }
+     }
+     
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="leftside">
+            <div class="profile">
+                <div class="image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ69k5mZGGqJyJPqKD3GUtImU4bNxXFOQMjTA&usqp=CAU" alt="photo">
+                </div>
+                <h2>om shankar shukla <br><span>web developer</span></h2>
+            </div>
+            <div class="contact">
+               <h2 class="title">Contact</h2>
+               <ul>
+                <li>
+                    <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                    <span class="text">+1 234 567 890</span>
+                </li>
+                <li>
+                    <span class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                    <span class="text">om@gmail.com</span>
+                </li>
+                <li>
+                    <span class="icon"><i class="fa fa-globe" aria-hidden="true"></i></span>
+                    <span class="text">www.website.com</span>
+                </li>
+                <li>
+                    <span class="icon"><i class="fa fa-linkedin" aria-hidden="true"></i></span>
+                    <span class="text">www.linkedin.com/om</span>
+                </li>
+                <li>
+                    <span class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                    <span class="text"> lucknow,up,india</span>
+                </li>
+               </ul>
+            </div>
+            <div class="contact education">
+                <h2 class="title">EDUCATION</h2>
+                <ul>
+                 <li>
+                     <h5>2022-2025</h5>
+                     <h4>Graduation</h4>
+                     <h4>College Name</h4>
+                 </li>
+                 <li>
+                    <h5>2017-2020</h5>
+                    <h4>Diploma in Mechenical engineering</h4>
+                    <h4>College Name</h4>
+                </li>
+                <li>
+                    <h5>2016-2017</h5>
+                    <h4>H.S.C (P.C.M)</h4>
+                    <h4>College Name</h4>
+                </li>
+                <li>
+                    <h5>2014-2015</h5>
+                    <h4>S.S.C (P.C.M)</h4>
+                    <h4>College Name</h4>
+                </li>
+              </ul>
+             </div>
+             <div class="contact language">
+                <ul>
+                    <li>
+                        <h3 class="text">Languages</h3>
+                    </li>
+                    <li>
+                        <span class="text">English</span>
+                        <div class="percent">
+                            <div style="width: 90%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="text">Hindi</span>
+                        <div class="percent">
+                            <div style="width: 60%;"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="text">French</span>
+                        <div class="percent">
+                            <div style="width: 90%;"></div>
+                        </div>
+                    </li>
+                </ul>
+             </div>
+        </div>
+        <div class="rightside">
+            <div class="about">
+                <h2 class="title2">Profile</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur 
+                    illum ex et ea quos eum vitae fugit. Ipsa perspiciatis dignissimos
+                    omnis aliquid ab ipsam! Ab debitis voluptate nulla quod exercitationem,
+                    commodi alias nemo a. Laboriosam fugiat fuga quae id tempore odio totam  <br> <br>
+                    neque eaque ex eum enim accusantium omnis laudantium voluptatibus, iste, 
+                    blanditiis magni obcaecati?</p>
+            </div>
+            <div class="about">
+                <h2 class="title2">Experience</h2>
+                <div class="box">
+                    <div class="comapany">
+                        <h5>2019-2020</h5>
+                        <h5>Company Name</h5>
+                    </div>
+                    <div class="text">
+                        <h4>Front end Developer</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis deleniti iusto,
+                            eum excepturi dolore dolorem eveniet vero non dolor sapiente repellendus. Aspernatur
+                            omnis veniam impedit!</p>
+                    </div>
+                </div>
+                  <div class="box">
+                    <div class="comapany">
+                        <h5>2020-2021</h5>
+                        <h5>Company Name</h5>
+                    </div>
+                    <div class="text">
+                        <h4>Backend Developer</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis deleniti iusto,
+                            eum excepturi dolore dolorem eveniet vero non dolor sapiente repellendus. Aspernatur
+                            omnis veniam impedit!</p>
+                    </div>
+                  </div>
+                    <div class="box">
+                        <div class="comapany">
+                            <h5>2021-present</h5>
+                            <h5>Company Name</h5>
+                        </div>
+                        <div class="text">
+                            <h4>Full stack Developer</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis deleniti iusto,
+                                eum excepturi dolore dolorem eveniet vero non dolor sapiente repellendus. Aspernatur
+                                omnis veniam impedit!</p>
+                        </div>
+                    </div>
+            </div>
+                      <div class="about skills">
+                        <h2 class="title2">Professional skills</h2>
+                        <div class="box">
+                            <h4>html</h4>
+                            <div class="percent">
+                                <div style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="box">
+                            <h4>css</h4>
+                            <div class="percent">
+                                <div style="width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <h4>javascript</h4>
+                            <div class="percent">
+                                <div style="width: 70%;"></div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <h4>React</h4>
+                            <div class="percent">
+                                <div style="width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <h4>Photoshop</h4>
+                            <div class="percent">
+                                <div style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <h4>python</h4>
+                            <div class="percent">
+                                <div style="width: 60%;"></div>
+                            </div>
+                        </div>
+                        <div class="about interest">
+                            <h2 class="title2">interest</h2>
+                            <ul>
+                                <li><i class="fa fa-microphone" aria-hidden="true"></i>singing</li>
+                                <li><i class="fa fa-gamepad" aria-hidden="true"></i>gaming</li>
+                                <li><i class="fa fa-book" aria-hidden="true"></i></i>reading</li> 
+                                <li><i class="fa fa-cutlery" aria-hidden="true"></i>cooking</li>
+                            </ul>
+                        </div>
+                      </div>
+        </div>
+    </div>
+</body>
+</html>
